@@ -1,0 +1,18 @@
+
+.bg-primary {
+    background-color: #040911;
+}
+
+nav {
+    margin-top: 1em;
+}
+
+.about-me-text {
+    background-color: #404142;
+    margin: 1em;
+    border-radius: 5px;
+}
+
+.about-me-text>h1, .about-me-text>h3, .about-me-text>p {
+    padding: 15px 15px 15px 15px;
+}
