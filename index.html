@@ -1,118 +1,67 @@
-<!doctype html>
-<html lang="en">
+﻿
+<!DOCTYPE html>
+<html>
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Game Project Shell</title>
 
-    <!-- Bootstrap CSS -->
+    <!--CDN Stylesheets-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+
+    <!--Our Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+    <!--CDN Scripts-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
 
-    <title>Connor Lundberg</title>
+    <!--Our Scripts-->
+    <script type="text/javascript" src="./js/entity.js"></script>
+    <script type="text/javascript" src="./js/gameengine.js"></script>
+    <script type="text/javascript" src="./js/assetmanager.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/player.js"></script>
+    <script type="text/javascript" src="./js/projectile.js"></script>
+
+
 </head>
-<body class="bg-primary">
-
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">
-                Welcome!
-            </a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li class="active"><a class="text-white" href="index.html">Home</a></li>
-            <li><a class="text-white" href="portfolio.html">Portfolio</a></li>
-        </ul>
-    </div>
-</nav>
-
-<div class="row">
-    <div class="col-sm-4"></div>
-    <div class="col-sm-4">
-        <img src="./img/linkedinpic1.jpg" class="img-thumbnail" id="selfie" alt="A majestic photo of me">
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-sm-12">
-        <div class="about-me-text">
-            <h1>About me</h1>
-            <h3>How I got started in Computer Science</h3>
-            <p>
-                &ensp;&ensp;While I was in high school, I enrolled in the <a href="http://www.k12.wa.us/SecondaryEducation/CareerCollegeReadiness/RunningStart.aspx">
-                Running Start</a> program for my Junior and Senior
-                year. Basically, it gave me two free years of college. In my area it was being offered at Olympic College
-                in Bremerton, Washington, which is where I started my higher education.
-                <br><br>
-                &ensp;&ensp;I was at a point in my life where I wanted to find something that I could turn
-                into a career. I had many hobbies and interests, but there wasn't anything that really
-                jumped out at me. Writing was something I enjoyed doing, though I didn't see it as a profession to pursue.
-                <br><br>
-                &ensp;&ensp;I took some different classes in varying fields, but nothing was sticking. Eventually, a
-                friend of mine that I played football with suggested I take the Programming Concepts course at OC. I
-                registered the following quarter, went through the whole thing, and loved it. I still remember the
-                professor, Mr. Dondi Hanson. I never met him in person, but he was a good teacher.
-                <br><br>
-                &ensp;&ensp;He started us with learning PHP. Not for using it in the normal sense, but for understanding the
-                core principles of programming, hence the title of the course. We did some very simple assignments that
-                taught us the basics of conditions, loops, variables, etc. It blew my mind that I was able to take a
-                huge file filled with raw data (not so raw in that case, but it was cool nonetheless) and be able
-                to turn it into readable logs that documented the trends in the information.
-                <br><br>
-                &ensp;&ensp;It set me on my path. After that class, I started taking some more programming classes. A little
-                bit of web development, XML, Intro to Computing type of stuff. Once I graduated from high school and enrolled
-                in the University of Washington Tacoma I dove into their Computer Science and Systems program. What a wild
-                ride it's been. Suffice it to say, I've done a lot of everything.
-                <br><br>
-                &ensp;&ensp;During my time at UWT I've built all kinds of projects:
-                <ul class="list-unstyled">
-                    <ul>
-                        <li>Java Applications</li>
-                        <li>Computer Architecture Simulations</li>
-                        <li>PostgreSQL and MySQL Servers</li>
-                        <li>Responsive Websites</li>
-                        <li>Mobile Android Apps</li>
-                        <li>Web Services</li>
-                        <li> Video Games
-                            <ul>
-                                <li>Unity3D</li>
-                                <li>Web-based</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </ul>
-            </p>
-            <p>
-                &ensp;&ensp;I do freelance work of all kinds. Check out my <a href="portfolio.html">Portfolio</a> to see some
-                of my past work and send me an email if there's   anything I can do for you.
-                <br><br>
-                Cheers, <br>
-                Connor Lundberg
-                <br>
-            </p>
-        </div>
-    </div>
-</div>
-
-</body>
-<footer class="page-footer blue center-on-small-only">
+<body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6">
-                <h5 class="title font-bold"><strong>Contact</strong></h5>
-                    <p>&ensp;&ensp;<i class="glyphicon glyphicon-envelope"></i>&ensp;lundbergconnor@gmail.com</p>
-                    <p>&ensp;&ensp;<i class="glyphicon glyphicon-earphone"></i>&ensp;(253) 355-0562</p>
+            <div class="col col-lg-4">
+                <canvas id="gameWorld" tabindex="1" width="785" height="785"></canvas>
             </div>
-            <div class="col-md-6">
-                <h5 class="title font-bold"><strong>Links</strong></h5>
-                <p>&ensp;&ensp;<a class="social-link" href="https://github.com/milk9111"><i class="fab fa-github"></i></a>
-                    &ensp;<a class="social-link" href="https://github.com/milk9111">Github</a></p>
+            <div class="col col-lg-2"></div>
+            <div class="col col-lg-2">
+                <h4>
+                    TCSS 491 Computational Worlds<br>
+                    Connor Lundberg<br>
+                    Assignment 1 - Animations<br>
+                </h4>
+                <h5><strong>Might take a little bit to load. Read the instructions while you're waiting!</strong></h5>
+                <br>
+                <p>
+                    This has an idle animation in 4 directions: forward, downward, left, right. It
+                    also has walking, sword swinging, shield raising, spell casting, and crossbow shooting
+                    in those same directions. If a spell is successfully cast it will create a fireball that
+                    animates in those 4 directions also.
+                    <br><br>
+                    Controls:<br>
+                    Left Mouse Click - Sword swing<br>
+                    W - Forward<br>
+                    A - Left<br>
+                    S - Downward<br>
+                    D - Right<br>
+                    E - Shield Raise<br>
+                    Space - Crossbow shoot<br>
+                    Q - Cast spell<br><br>
+
+                    *When casting a spell, the animation you see is an idle while the game waits for
+                    your input, in order to successfully cast the spell and see the fireball on the screen,
+                    you must type in the combo WWAD.*
+                </p>
             </div>
         </div>
     </div>
-</footer>
+</body>
 </html>
