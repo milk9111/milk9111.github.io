@@ -1,0 +1,67 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Game Project Shell</title>
+
+    <!--CDN Stylesheets-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!--Our Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+    <!--CDN Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--Our Scripts-->
+    <script type="text/javascript" src="js/entity.js"></script>
+    <script type="text/javascript" src="js/gameengine.js"></script>
+    <script type="text/javascript" src="js/assetmanager.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/player.js"></script>
+    <script type="text/javascript" src="js/projectile.js"></script>
+
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col col-lg-4">
+                <canvas id="gameWorld" tabindex="1" width="785" height="785"></canvas>
+            </div>
+            <div class="col col-lg-2"></div>
+            <div class="col col-lg-2">
+                <h4>
+                    TCSS 491 Computational Worlds<br>
+                    Connor Lundberg<br>
+                    Assignment 1 - Animations<br>
+                </h4>
+                <h5><strong>Might take a little bit to load. Read the instructions while you're waiting!</strong></h5>
+                <br>
+                <p>
+                    This has an idle animation in 4 directions: forward, downward, left, right. It
+                    also has walking, sword swinging, shield raising, spell casting, and crossbow shooting
+                    in those same directions. If a spell is successfully cast it will create a fireball that
+                    animates in those 4 directions also.
+                    <br><br>
+                    Controls:<br>
+                    Left Mouse Click - Sword swing<br>
+                    W - Forward<br>
+                    A - Left<br>
+                    S - Downward<br>
+                    D - Right<br>
+                    E - Shield Raise<br>
+                    Space - Crossbow shoot<br>
+                    Q - Cast spell<br><br>
+
+                    *When casting a spell, the animation you see is an idle while the game waits for
+                    your input, in order to successfully cast the spell and see the fireball on the screen,
+                    you must type in the combo WWAD.*
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
